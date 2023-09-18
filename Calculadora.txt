@@ -1,0 +1,56 @@
+// Calculadora hecha en C++
+
+#include <iostream>
+
+using namespace std;
+
+int Suma(int a, int b);
+int Resta(int a, int b);
+int Multiplicacion(int a, int b);
+int Division(int a, int b);
+
+int main(void)
+{
+    int a, b, c, opc;
+
+    cout << "Ingrese valor 1: ";
+    cin >> a;
+
+    cout << "Ingrese valor 2: ";
+    cin >> b;
+
+    cout << endl << endl << "Que operacion quiere realizar" << endl;
+    cout << "1) Suma" << endl;
+    cout << "2) Resta" << endl;
+    cout << "3) Multiplicacion" << endl;
+    cout << "4) Division" << endl;
+    cout << endl << "Ingrese opcion a realizar: " << endl;
+    cin >> opc;
+
+    switch (opc)
+    {
+        case 1:
+            c = Suma(a, b);
+
+            break;
+
+        case 2:
+            c = Resta(a, b);
+
+            break;
+
+        case 3:
+            c = Multiplicacion(a, b);
+
+            break;
+
+        case 4:
+            c = Division(a, b);
+
+            break;
+    }
+
+    cout << endl << "El resultado es:" << c << endl;
+
+    return 0;
+}
